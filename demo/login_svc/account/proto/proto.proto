@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+// 客户端协议直接放在，模块目录里
+
+package cproto;
+
+message NewUserReq {
+	string Name = 1;
+	string Password = 2;
+}
+
+message NewUserRes {
+	int32 Ret = 1;
+	string Msg = 2;
+}
+
+message LoginReq {
+	string Name = 1;
+	string Password = 2;
+}
+
+message LoginRes {
+	int32 Ret = 1;
+	string Msg = 2;
+	string Token = 3;
+}

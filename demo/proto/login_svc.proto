@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package sproto;
+
+message UserLoginReq {
+	string GateAddr = 1;
+	uint64 GateClient = 2;
+	string Name = 3;
+	string Password = 4;
+}
+
+message GetSessionReq {
+	string UserName = 1;
+}
+
+message OnLogin {
+	// Broadcast为广播消息标识
+	bool Broadcast = 1;
+	string Name = 2;
+	uint32 NameHash = 3;
+	string OwnerAddr = 4;
+	string Token = 5;
+	string GateAddr = 6;
+	uint64 GateClient = 7;
+}

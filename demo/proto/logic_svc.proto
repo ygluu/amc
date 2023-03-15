@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package sproto;
+
+message Login {
+	string Name = 1;
+	string Addr = 2;
+	int32 Sex = 4;
+}
